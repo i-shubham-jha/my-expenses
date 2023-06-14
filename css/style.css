@@ -1,0 +1,539 @@
+#incomeChart
+{
+    width: 100%;
+}
+
+.bottom
+{
+    background-color: #f5f9f9;
+}
+
+.body
+{
+    background-color: #f5f9f9;
+}
+
+
+#interactiveTable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#interactiveTable td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#interactiveTable tr:nth-child(even){background-color: #f2f2f2;}
+
+#interactiveTable tr:hover {background-color: #ddd;}
+
+#interactiveTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #0db087;
+  color: white;
+}
+
+
+#dateTimeInput
+{
+    width: 200px;
+}
+
+#monthYearSelect
+{
+    width: 200px;
+}
+
+.buttonCSS
+{
+    background-color: #00b2a3; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 12.5px 16px;
+    transition: transform .2s;
+}
+
+.buttonCSS:hover
+{
+    transform: scale(1.2);
+}
+
+.footer
+{
+    text-align: center;
+/*    margin: 50px;*/
+    background-color: #f5f9f9;
+    padding: 50px;
+}
+
+#interactiveClearButton
+{
+    margin-left: 5px;
+}
+
+.sidebarImages
+{
+    width: 45px;
+    transition: transform .2s;
+    border-radius: 5px;
+}
+
+.sidebarImages:hover
+{
+    transform: scale(1.2);
+}
+
+.leftShortcutsDiv
+{
+    position: fixed;
+    height: 100px;
+    width: 50px;
+    background-color: #00b2a3;
+    z-index: 9;
+    top: 40%;
+
+    border: double #00b2a3;
+
+    border-radius:0px 5px 5px 0px;
+
+}
+
+.hideTheDiv
+{
+    display: none;
+}
+
+#expenseChart
+{
+    width: 100%;
+}
+
+.monthlyGraphDiv
+{
+    text-align: center;
+    margin-top: 50px;
+}
+
+#monthlyGraph
+{
+    margin-top: 50px;
+}
+
+.monthlyGraphCanvasDiv
+{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+   /* height: 1100px;*/
+}
+
+#overallBarGraphDiv
+{
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+}
+
+
+
+.pleaseWork
+{
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.interactiveTablesDiv
+{
+    text-align: center;
+    margin-top: 50px;
+
+}
+
+#inter
+
+.monthlyGraphDiv
+{
+    text-align: center;
+}
+
+#dropDown
+{
+    border-radius: 5px;
+}
+
+#interactiveDropDown
+{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+}
+
+#interactiveTable
+{
+
+}
+
+body {
+    color: #555;
+    font-family: Open Sans;
+    font-size: 16px;
+    position: relative;
+    height: 100vh;
+    font-weight: 400;
+}
+
+.income__list
+{
+   text-align: center;
+   margin-top: 50px;
+}
+
+.expenses__list
+{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.income__href
+{
+    color: #2cab32;
+}
+
+.expense__href
+{
+    color: #FF5049;
+}
+
+.tr
+{
+    margin: 10px;
+}
+
+.table
+{
+    text-align: center;
+    width: 100%;
+}
+
+.right { float: right; }
+
+
+.input-fields-color-select-trans-type:focus { border: 1px solid #FF5049 !important; }
+.button-color-select-trans-type { color: #FF5049 !important; }
+
+
+
+.top {
+    height: 40vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../assets/bg.webp);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.budget {
+    position: absolute;
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.budget__title {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.budget__value {
+    font-weight: 400;
+    font-size: 46px;
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.budget__income,
+.budget__expenses {
+    padding: 12px;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+.budget__income {
+    margin-bottom: 10px;
+    background-color: #2cab32;
+}
+
+.budget__expenses {
+    background-color: #FF5049;
+}
+
+.budget__income__text,
+.budget__expenses__text {
+    float: left;
+    font-size: 13px;
+    color: #FFF;
+    margin-top: 2px;
+}
+
+.budget__income__value,
+.budget__expenses__value {
+    letter-spacing: 1px;
+    float: left;
+}
+
+.budget__income__percentage,
+.budget__expenses__percentage {
+    float: left;
+    font-size: 14px;
+    padding: 3px;
+    margin-left: 10px;
+}
+
+.budget__expenses__percentage {
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    border-radius: 3px;
+}
+
+
+.add {
+    padding: 14px;
+    border-bottom: 1px solid #e7e7e7;
+    background-color: #f7f7f7;
+}
+
+.add__container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.add__type {
+    width: 160px;
+    border: 1px solid #e7e7e7;
+    height: 44px;
+    font-size: 18px;
+    color: inherit;
+    background-color: #fff;
+    margin-right: 10px;
+    font-weight: 300;
+}
+
+.add__description,
+.add__value {
+    border: 1px solid #e7e7e7;
+    background-color: #fff;
+    color: inherit;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 12px 15px;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: border 0.3s;
+
+}
+
+#yearInputField
+{
+    width: 150px;
+}
+
+#interactiveDropDown
+{
+    width: 200px;
+}
+
+
+.add__description { width: 400px;}
+.add__value { width: 200px;}
+
+.add__btn {
+    font-size: 35px;
+    background: none;
+    border: none;
+    color: #017906 ;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.1;
+    margin-left: 10px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.add__btn:active { transform: translateY(2px); }
+
+.add__type:focus,
+.add__description:focus,
+.add__value:focus {
+    outline: none;
+    border: 1px solid #017906;
+}
+
+.add__btn:focus { outline: none; }
+
+.container {
+    width: 1200px;
+    margin: 20px auto;
+}
+
+.income {
+    float: left;
+    width: 575px;
+    margin-right: 50px;
+}
+
+.expenses {
+    float: left;
+    width: 575px;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.income__expense__title__common__style {
+    font-weight: 600;
+    text-align: center;
+}
+
+.icome__title { color: #017906; }
+.expenses__title { color: #FF5049;}
+
+.item {
+    padding: 13px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.item:first-child { border-top: 1px solid #e7e7e7; }
+.item:nth-child(even) { background-color: #f7f7f7; }
+
+.item__description {
+    float: left;
+}
+
+.item__value {
+    float: left;
+    transition: transform 0.3s;
+    font-weight: 800;
+}
+
+.item__percentage {
+    float: left;
+    margin-left: 20px;
+    transition: transform 0.3s;
+    font-size: 14px;
+    background-color: #FFDAD9;
+    padding: 3px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.income .item__value {
+    color: #017906;
+}
+
+.income .item__delete__btn,
+.expenses .item__delete__btn {
+    color: #FF5049;
+}
+
+.expenses .item__value {
+    color: #FF5049;
+}
+
+.expenses .item__percentage {
+    color: #000;
+}
+
+.item__delete {
+    float: left;
+}
+
+.item__delete__btn {
+    font-size: 20px;
+    margin-top: 5%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    display: none;
+}
+
+.item__delete__btn:focus { outline: none; }
+.item__delete__btn:active { transform: translateY(2px); }
+
+.item:hover .item__delete__btn { display: block;}
+.item:hover .item__value { transform: translateX(-20px); color: #fc2f27;}
+.item:hover .item__percentage { transform: translateX(-20px); }
+
+
+.unpaid {
+    background-color: #FFDAD9 !important;
+    cursor: pointer;
+    color: #FF5049;
+
+}
+
+.unpaid .item__percentage { box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1); }
+.unpaid:hover .item__description { font-weight: 900; }
+
+
+.button {
+    margin-top: 2%;
+    margin-bottom: 4%;
+    margin-left: 44%;
+    color: #000;
+    font-size: 10pt;
+    height: 1.5%;
+    width: 14%;
+    padding: 0.8%;
+
+    border: 1px solid;
+    border-color: #FAFAFA;
+    background-color: #FAFAFA;
+
+     border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+}
+
+.button:hover {
+    color: #FAFAFA;
+    border-color: #000;
+    background-color: #000;
+}

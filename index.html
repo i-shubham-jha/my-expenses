@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="css/style.css">
+        <title>myExpenses</title>
+    </head>
+    <body class="body">
+
+        <div class="leftShortcutsDiv">
+            <div>
+                <img id="showListButton" class="sidebarImages" src="assets/list.gif" alt="">
+            </div>
+            <div>
+                <img id="showLineChartButton" class="sidebarImages" src="assets/line-chart.gif" alt="">
+            </div>
+        </div>
+
+        <div class="top">
+            <div class="budget">
+                <div class="budget__title">
+                    Overview
+                </div>
+                <div id="overviewBudgetValue" class="budget__value">0.0</div>
+
+                <div class="budget__income clearfix">
+                    <div class="budget__income__text">Income</div>
+                    <div class="right">
+                        <div id="netIncomeValue"  class="budget__income__value">0.0</div>
+                    </div>
+                </div>
+
+                <div class="budget__expenses clearfix">
+                    <div class="budget__expenses__text">Expenses</div>
+                    <div class="right clearfix">
+                        <div id="netExpenseValue" class="budget__expenses__value">0.0</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="bottom">
+            <div class="add">
+                <div class="add__container">
+                    <select id="dropDown"  class="add__type">
+                        <optgroup label="Income">
+                            <option value="salary">Salary</option>
+                            <option value="sales">Sales</option>
+                            <option value="pocketMoney">Pocket Money</option>
+                            <option value="tip">Tip</option>
+                            <option value="interest">Interest</option>
+                            <option value="prize">Prize</option>
+                        </optgroup>
+
+                        <optgroup label="Expense">
+                            <option value="travel">Travel</option>
+                            <option value="fnb">Food and Drinks</option>
+                            <option value="tech">Tech</option>
+                            <option value="carExpenses">Car Expenses</option>
+                            <option value="essentials">Essentials</option>
+                            <option value="friends">Friends</option>
+                            <option value="hobby">Hobby</option>
+                            <option value="meds">Meds</option>
+                            <option value="movie">Movie</option>
+                            <option value="stationery">Stationery</option>
+                        </optgroup>
+                    </select>
+                    <input id="description" type="text" class="add__description" placeholder="* Transaction description">
+                    <input id="transactionValue" type="number" class="add__value" id="enterSum" placeholder="* Transaction value">
+                    <input class="add__description" type="datetime-local" id="dateTimeInput">
+                    <input id="submitButton" class="buttonCSS" value="Enter" type="submit">
+                </div>
+            </div>
+
+            <div class="container clearfix">
+                <div class="income">
+                    <h2 class="income__expense__title__common__style icome__title ">Income</h2>
+
+                    <div>
+                        <canvas id="incomeChart" ></canvas>
+                    </div>
+
+                    <!--<div class="income__list">
+                        <table id="incomeTable" class="table">
+                            <thead><th>Time</th><th>Description</th><th>Amount</th></thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                        <a class="income__href" href="income.html">More...</a>
+                    </div>-->
+                </div>
+
+                <div class="expenses">
+                    <h2 class="income__expense__title__common__style expenses__title">Expenses</h2>
+
+                    <div>
+                        <canvas id="expenseChart"></canvas>
+                    </div>
+
+                    <!--<div class="expenses__list">
+                        <table id="expenseTable" class="table">
+                            <thead><th>Time</th><th>Description</th><th>Amount</th></thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                        <a class="expense__href" href="expense.html">More...</a>
+                    </div>-->
+                </div>
+            </div>
+
+            <div id="interactiveTablesDiv" class="interactiveTablesDiv" style="display: none;">
+                <div>
+                    <input id="monthYearSelect" class="add__description" type="month">
+                    <select id="interactiveDropDown"  class="add__type add__description">
+                        <optgroup label="Income">
+                            <option value="allIncomes">All Income</option>
+                            <option value="salary">Salary</option>
+                            <option value="sales">Sales</option>
+                            <option value="pocketMoney">Pocket Money</option>
+                            <option value="tip">Tip</option>
+                            <option value="interest">Interest</option>
+                            <option value="prize">Prize</option>
+                        </optgroup>
+
+                        <optgroup label="Expense">
+                            <option value="allExpenses">All Expenses</option>
+                            <option value="travel">Travel</option>
+                            <option value="fnb">Food and Drinks</option>
+                            <option value="tech">Tech</option>
+                            <option value="carExpenses">Car Expenses</option>
+                            <option value="essentials">Essentials</option>
+                            <option value="friends">Friends</option>
+                            <option value="hobby">Hobby</option>
+                            <option value="meds">Meds</option>
+                            <option value="movie">Movie</option>
+                            <option value="stationery">Stationery</option>
+                        </optgroup>
+                    </select>
+
+                    <input id="interactiveSubmitButton" class="buttonCSS" type="submit" value="Show">
+                    <input id="interactiveClearButton" type="submit" class="buttonCSS" value="Clear">
+                </div>
+
+                <p> </p>
+                <div>
+                        <table id="interactiveTable" class="table">
+
+                        </table>
+                </div>
+            </div>
+
+            <div id="monthlyGraphDiv" class="monthlyGraphDiv" style="display: none;">
+                Please enter year: <input id="yearInputField" class="add__description" placeholder="*Enter year" type="year">
+                <input id="submitYearButton" class="buttonCSS" value="Show" type="submit">
+                <div class="monthlyGraphCanvasDiv" >
+                    <canvas id="monthlyGraph"></canvas>
+                </div>
+                <div id="overallBarGraphDiv">
+                    <canvas class="pleaseWork" id="overallBarGraphCanvas"></canvas>
+                </div>
+            </div>
+        </div>
+
+    <script src="https://unpkg.com/localbase/dist/localbase.min.js"></script>
+
+
+
+
+
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+    <script src="js/index.js"></script>
+
+
+
+    </body>
+    <footer class="footer">
+        Made by Shubham Jha
+    </footer>
+</html>
